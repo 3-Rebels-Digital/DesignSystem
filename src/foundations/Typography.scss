@@ -1,0 +1,40 @@
+@import "../styles/global";
+
+#typography {
+    padding: 48px 64px;
+}
+
+.row {
+    display: flex;
+    gap: 24px;
+
+    &-title {
+        font-size: rem(17);
+        line-height: 135%;
+        font-weight: 400;
+    }
+
+    &-body {
+        font-family: monospace;
+        font-size: rem(12);
+        font-weight: 400;
+        letter-spacing: rem(0.72);
+        text-transform: uppercase;
+    }
+}
+
+.description {
+    max-width: 262px;
+}
+
+.display-text-wrapper,
+.heading-text-wrapper,
+.body-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+}
+
+.heading-text-wrapper {
+    flex-grow: 1;
+}

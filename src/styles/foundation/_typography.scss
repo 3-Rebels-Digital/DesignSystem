@@ -1,0 +1,85 @@
+// typography styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+}
+
+h5,
+h6 {
+    font-weight: 300;
+}
+
+h1 {
+    font-size: rem(76);
+}
+
+h2 {
+    font-size: rem(56);
+}
+
+h3 {
+    font-size: rem(36);
+}
+
+h4 {
+    font-size: rem(28);
+}
+
+h5 {
+    font-size: rem(24)
+}
+
+h6 {
+    font-size: rem(22);
+}
+
+p {
+    margin: 0;
+    font-size: rem(18);
+
+    &.sm {
+        font-size: rem(15);
+    }
+
+    &.lg {
+        font-size: rem(21);
+    }
+}
+
+caption {
+    font-size: rem(11);
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: rem(0.72);
+    text-transform: uppercase;
+    margin: 0;
+    text-align: left;
+}
+
+.display-text {
+    font-family: "FT Activica Normal", sans-serif;
+    text-transform: uppercase;
+
+    &.--large {
+        font-size: rem(112);
+    }
+
+    &.--medium {
+        font-size: rem(96);
+    }
+
+    &.--small {
+        font-size: rem(76);
+    }
+}

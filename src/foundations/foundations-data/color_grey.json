@@ -1,0 +1,52 @@
+[
+    {
+        "tag": "AAA",
+        "level": "100",
+        "color": "#F0F0F0"
+    },
+    {
+        "tag": "AAA",
+        "level": "200",
+        "color": "#E1E1E1"
+    },
+    {
+        "tag": "AA",
+        "level": "300",
+        "color": "#C4C3C3"
+    },
+    {
+        "tag": "54",
+        "level": "400",
+        "color": "#A6A6A5"
+    },
+    {
+        "tag": "AA",
+        "level": "500",
+        "color": "#898887"
+    },
+    {
+        "tag": "AAA",
+        "level": "600",
+        "color": "#6B6A69"
+    },
+    {
+        "tag": "AAA",
+        "level": "700",
+        "color": "#565554"
+    },
+    {
+        "tag": "AAA",
+        "level": "800",
+        "color": "#40403F"
+    },
+    {
+        "tag": "AAA",
+        "level": "900",
+        "color": "#2B2A2A"
+    },
+    {
+        "tag": "AAA",
+        "level": "1000",
+        "color": "#151515"
+    }
+]

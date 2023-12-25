@@ -1,0 +1,35 @@
+{
+  "name": "toolchest",
+  "version": "1.0.0",
+  "main": "index.tsx",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/react-webpack5": "^7.6.6",
+    "@storybook/test": "^7.6.6",
+    "@types/react": "^18.2.45",
+    "file-loader": "^6.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass-loader": "^13.3.2",
+    "storybook": "^7.6.6",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "classnames": "^2.3.3",
+    "node-sass": "^9.0.0"
+  }
+}

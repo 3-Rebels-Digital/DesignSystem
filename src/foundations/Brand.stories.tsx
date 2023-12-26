@@ -2,6 +2,7 @@ import { Meta } from "@storybook/react";
 import React from "react";
 import "./Brand.scss";
 import LOGO from "@public/logo.svg";
+import LOGOWHITE from "@public/logoWhite.svg";
 
 const meta: Meta = {
     title: "Foundations/Brand",
@@ -22,7 +23,7 @@ export const Brand = () => {
                 />
                 <div className="logo-wrapper">
                     <img src={LOGO} alt="logo" />
-                    <img src="/static/media/public/logoWhite.svg" alt="" />
+                    <img src={LOGOWHITE} alt="logo in white" />
                 </div>
             </div>
         </div>

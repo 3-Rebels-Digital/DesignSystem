@@ -1,6 +1,11 @@
 {
     "compilerOptions": {
-        "baseUrl": "./",
+        "baseUrl": ".",
+        "paths": {
+            "@public/*": [
+                "public/*"
+            ]
+        },
         "target": "es5",
         "outDir": "lib",
         "lib": [
@@ -21,18 +26,14 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react"
+        "jsx": "react",
     },
     "include": [
-        "src"
+        "src",
+        "custom.d.ts"
     ],
     "exclude": [
         "node_modules",
         "lib"
-    ],
-    "paths": {
-        "@public/*": [
-            "public/*"
-        ]
-    },
+    ]
 }

@@ -28,6 +28,12 @@ const config = {
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of the storybook.
 
+    // Add alias configuration
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}), // preserve existing aliases
+      '@public': path.resolve(__dirname, '../public'), // add your new alias
+    };
+
     // Make whatever fine-grained changes you need
     config.module.rules.push({
       test: /\.scss$/,

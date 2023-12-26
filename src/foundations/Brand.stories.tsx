@@ -3,6 +3,8 @@ import React from "react";
 import "./Brand.scss";
 import LOGO from "@public/logo.svg";
 import LOGOWHITE from "@public/logoWhite.svg";
+import FavIcon from "@public/3R.svg";
+import FavIconWhite from "@public/3R--white.svg";
 
 const meta: Meta = {
     title: "Foundations/Brand",
@@ -24,6 +26,17 @@ export const Brand = () => {
                 <div className="logo-wrapper">
                     <img src={LOGO} alt="logo" />
                     <img src={LOGOWHITE} alt="logo in white" />
+                </div>
+            </div>
+            <hr />
+            <div className="row">
+                <Description
+                    title={"Icon/Favicon"}
+                    body={"used in smaller areas, instances, and also once 3r has been introduced."}
+                />
+                <div className="logo-wrapper">
+                    <img src={FavIcon} alt="logo" />
+                    <img src={FavIconWhite} alt="logo in white" />
                 </div>
             </div>
         </div>

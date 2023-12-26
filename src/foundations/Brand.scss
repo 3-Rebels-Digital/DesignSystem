@@ -7,6 +7,7 @@
 .row {
     display: flex;
     gap: 24px;
+    padding-top: rem(16);
 
     &-title {
         font-size: rem(17);
@@ -23,6 +24,10 @@
     }
 }
 
+.description {
+    width: rem(262);
+}
+
 .logo-wrapper {
     display: flex;
     flex-direction: column;
@@ -31,4 +36,7 @@
     padding: rem(20);
     gap: rem(20);
     background-color: #40403F;
+    margin-top: rem(24);
+    margin-left: rem(24);
+    margin-bottom: rem(72);
 }

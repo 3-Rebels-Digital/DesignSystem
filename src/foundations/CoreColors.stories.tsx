@@ -2,7 +2,6 @@ import { Meta } from "@storybook/react";
 import React from "react";
 import "./CoreColors.scss";
 import GREY from "./foundations-data/color_grey.json";
-// import Green and gold
 import GREEN from "./foundations-data/color_green.json";
 import GOLD from "./foundations-data/color_gold.json";
 

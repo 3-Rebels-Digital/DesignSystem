@@ -4,6 +4,9 @@
   "main": "index.tsx",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
     "@storybook/addon-essentials": "^7.6.6",
     "@storybook/addon-interactions": "^7.6.6",
     "@storybook/addon-links": "^7.6.6",
@@ -14,8 +17,14 @@
     "@storybook/test": "^7.6.6",
     "@types/react": "^18.2.45",
     "file-loader": "^6.2.0",
+    "node-sass-glob-importer": "^5.3.3",
+    "postcss": "^8.4.32",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup": "^4.9.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "sass-loader": "^13.3.2",
     "storybook": "^7.6.6",
     "typescript": "^5.3.3"
@@ -26,7 +35,8 @@
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build-css": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js --output-style compressed src/styles/styles.scss public/styles.css"
   },
   "dependencies": {
     "classnames": "^2.3.3",

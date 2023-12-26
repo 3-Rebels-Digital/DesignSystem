@@ -1,0 +1,34 @@
+@import "../styles/global";
+
+#brand {
+    padding: rem(48) rem(64);
+}
+
+.row {
+    display: flex;
+    gap: 24px;
+
+    &-title {
+        font-size: rem(17);
+        line-height: 135%;
+        font-weight: 400;
+    }
+
+    &-body {
+        font-family: monospace;
+        font-size: rem(12);
+        font-weight: 400;
+        letter-spacing: rem(0.72);
+        text-transform: uppercase;
+    }
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: rem(2) dashed #9747FF;
+    border-radius: rem(5);
+    padding: rem(20);
+    gap: rem(20);
+    background-color: #40403F;
+}

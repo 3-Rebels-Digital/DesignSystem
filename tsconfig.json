@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": "./",
         "target": "es5",
         "outDir": "lib",
         "lib": [
@@ -28,5 +29,10 @@
     "exclude": [
         "node_modules",
         "lib"
-    ]
+    ],
+    "paths": {
+        "@public/*": [
+            "public/*"
+        ]
+    },
 }

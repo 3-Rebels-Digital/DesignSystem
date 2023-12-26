@@ -1,6 +1,7 @@
 import { Meta } from "@storybook/react";
 import React from "react";
 import "./Brand.scss";
+import LOGO from "@public/logo.svg";
 
 const meta: Meta = {
     title: "Foundations/Brand",
@@ -20,7 +21,7 @@ export const Brand = () => {
                     body={"The primary logo is used for all branded areas."}
                 />
                 <div className="logo-wrapper">
-                    <img src={"/static/media/public/logo.svg"} alt="placeholder" />
+                    <img src={LOGO} alt="logo" />
                     <img src="/static/media/public/logoWhite.svg" alt="" />
                 </div>
             </div>

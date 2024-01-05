@@ -4,6 +4,6 @@ export default create({
     base: 'dark',
     brandTitle: '3 Rebels Digital | Toolchest',
     //   brandUrl: 'https://example.com',
-    brandImage: "static/media/public/logoWhite.svg",
+    brandImage: "https://main--heroic-paprenjak-971f10.netlify.app/static/media/logoWhite.fd481593.svg",
     //   brandTarget: '_self',
 });

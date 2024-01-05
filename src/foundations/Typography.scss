@@ -1,7 +1,12 @@
 @import "../styles/global";
 
+body.sb-show-main.sb-main-padded:has(#typography, #coreColors, #brand) {
+    padding: 0;
+}
+
 #typography {
     padding: 48px 64px;
+    background: #202020;
 }
 
 .row {

@@ -3,3 +3,19 @@
 }
 
 ;
+
+// _functions.scss
+@function clr($color-map, $color-key) {
+
+    // Check if the provided key exists in the map
+    @if map-has-key($color-map, $color-key) {
+        @return map-get($color-map, $color-key);
+    }
+
+    @else {
+        // If the key doesn't exist, throw an error
+        @error "Invalid color key `#{$color-key}`. Available keys are: #{map-keys($color-map)}.";
+    }
+}
+
+;

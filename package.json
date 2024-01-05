@@ -12,9 +12,11 @@
     "@storybook/addon-links": "^7.6.6",
     "@storybook/addon-onboarding": "^1.0.10",
     "@storybook/blocks": "^7.6.6",
+    "@storybook/manager-api": "^7.6.7",
     "@storybook/react": "^7.6.6",
     "@storybook/react-webpack5": "^7.6.6",
     "@storybook/test": "^7.6.6",
+    "@storybook/theming": "^7.6.7",
     "@types/react": "^18.2.45",
     "file-loader": "^6.2.0",
     "node-sass-glob-importer": "^5.3.3",
@@ -26,7 +28,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "sass-loader": "^13.3.2",
-    "storybook": "^7.6.6",
+    "storybook": "^7.6.7",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
@@ -39,6 +41,7 @@
     "build-css": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js --output-style compressed src/styles/styles.scss public/styles.css"
   },
   "dependencies": {
+    "@storybook/addon-a11y": "^7.6.6",
     "classnames": "^2.3.3",
     "node-sass": "^9.0.0"
   }

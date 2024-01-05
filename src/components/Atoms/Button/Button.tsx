@@ -1,28 +1,25 @@
 import React from "react";
 import classNames from "classnames";
 import "./Button.scss";
+import Arrow from "../../../assets/Icons/ArrowRight.svg";
 
 export interface ButtonProps {
     /**
      * Is this the principal call to action on the page?
      */
-    type?: "primary" | "secondary";
+    type?: "primary" | "outline" | "underline";
     /**
-     * What background color to use
+     * children
      */
-    textColor?: string;
-    /**
-     * How large should the button be?
-     */
-    size?: "small" | "medium" | "large";
-    /**
-     * Button contents
-     */
-    label: string;
+    children?: React.ReactNode;
     /**
      * Optional click handler
      */
     onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    /**
+     * is button disabled
+     */
+    disabled?: boolean;
 }
 
 /**
@@ -30,23 +27,23 @@ export interface ButtonProps {
  */
 export const Button = ({
     type = "primary",
-    textColor,
-    size = "medium",
     onClick,
-    label,
+    disabled = false,
+    children,
 }: ButtonProps) => {
+    const classes = classNames({
+        "a-button": true,
+        [`--${type}`]: true,
+    });
     return (
         <button
             type="button"
-            className={classNames(
-                "storybook-button",
-                `storybook-button--${size}`,
-                `storybook-button--${type}`
-            )}
-            style={textColor ? { color: textColor } : {}}
+            className={classes}
             onClick={onClick}
+            disabled={disabled}
         >
-            {label}
+            {children}
+            <img src={Arrow} alt="Arrow Right" />
         </button>
     );
 };

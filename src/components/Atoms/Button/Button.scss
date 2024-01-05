@@ -1,35 +1,142 @@
-.storybook-button {
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    border: 0;
-    border-radius: 3em;
+@import "src/styles/_global.scss";
+
+.a-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(8) rem(16);
+    font-family: "3R Aspektv", sans-serif;
+    border-radius: rem(56);
+    font-size: rem(15);
+    font-weight: 500;
+    border: rem(1) solid var(--Transparent, rgba(255, 255, 255, 0.00));
+    background: var(--Gradients-Greens, linear-gradient(90deg, rgba(10, 228, 72, 0.78) 0%, rgba(10, 228, 72, 0.78) 50%, #0AE448 50%, #ABFF84 100%));
+    background-size: 210% 200%;
+    background-repeat: no-repeat;
+    background-position: 99% 50%;
+    transition: all .5s ease-in;
     cursor: pointer;
-    display: inline-block;
-    line-height: 1;
-}
 
-.storybook-button--primary {
-    color: white;
-    background-color: #1ea7fd;
-}
+    img {
+        padding-left: rem(8);
+    }
 
-.storybook-button--secondary {
-    color: #333;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-}
+    &:hover {
+        background-position: 5% 50%;
+    }
 
-.storybook-button--small {
-    font-size: 12px;
-    padding: 10px 16px;
-}
+    &:active,
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+        background-position: 0% 0%;
+        background: #0AE448;
+        outline: none;
+        border: rem(1) solid $black;
+    }
 
-.storybook-button--medium {
-    font-size: 14px;
-    padding: 11px 20px;
-}
+    &:disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        background: clr($architecture-grey, 100);
 
-.storybook-button--large {
-    font-size: 16px;
-    padding: 12px 24px;
+        img {
+            opacity: .3;
+        }
+    }
+
+    &.--outline {
+        background: transparent;
+        border: rem(1) solid #0AE448;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: rem(100);
+            height: rem(100);
+            background-color: #0AE448;
+            z-index: -1;
+            scale: 0;
+            border-radius: 100%;
+            aspect-ratio: 1 / 1;
+            transition: all .35s ease-out;
+        }
+
+        &:hover {
+            &::before {
+                scale: 2;
+                transition: all .5s ease-out;
+            }
+        }
+
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+            border-color: $black;
+            box-shadow: 0 0 rem(4) 0 #0AE448;
+        }
+
+        &:active {
+            border-color: $black;
+            background: #0AE448;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+            border-color: clr($architecture-grey, 300);
+
+            img {
+                opacity: .3;
+            }
+        }
+    }
+
+    &.--underline {
+        background: transparent;
+        border: none;
+        position: relative;
+        border-radius: 0;
+        padding: rem(8) 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: rem(1);
+            width: 100%;
+            height: rem(1);
+            background: linear-gradient(to right, #0AE448 0%, #0AE448 50%, clr($architecture-grey, 800) 50%, clr($architecture-grey, 800) 100%);
+            background-repeat: no-repeat;
+            background-size: 220% 200%;
+            background-position: 100% 0%;
+            transition: all .35s ease-out;
+        }
+
+        &:hover,
+        &:focus,
+        &:focus-within,
+        &:active {
+            &::before {
+                background-position: 5% 100%;
+                transition: all .5s ease-out;
+            }
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+            border-color: clr($architecture-grey, 300);
+
+            &::before {
+                background: clr($architecture-grey, 300);
+            }
+
+            img {
+                opacity: .3;
+            }
+        }
+    }
 }
